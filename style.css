@@ -1,0 +1,89 @@
+body {
+    background-color: #e59ffa;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    margin: 150px auto;
+}
+
+.cake {
+    width: 300px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    animation: spin 5s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animated-text {
+    font-size: 2em;
+    color: #007bff; /* Or any color you prefer */
+    animation: bounce 1s ease-in-out infinite; /* Bouncing animation */
+
+}
+
+@keyframes bounce {
+   0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:rgb(255, 37, 30); left:200px; top:0px;}
+  50%  {background-color:yellow; left:200px; top:200px;}
+  75%  {background-color:greenyellow; left:0px; top:200px;}
+  100% {background-color:blueviolet; left:0px; top:0px;}
+}
+
+.typing-effect {
+    overflow: auto; /* Hides overflowing text */
+    white-space: normal; /* Prevents text from wrapping */
+    width: 100; /* Initially hides the text */
+    animation: typing 18s steps(40, end) forwards; /* Animation for typing */
+  }
+  
+  @keyframes typing {
+    from { width: 100; }
+    to { width: 100%; }
+  }  
+.typing-effect::after {
+    content: "|"; /* Insert a vertical bar as the cursor */
+    animation: blink 1.75s step-end infinite; /* Blinking animation */
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.confetti {
+    background-color: #ff6347; /* Tomato color */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    animation: confetti-fall 3s infinite;
+}
+
+.confetti:nth-child(1) { left: 10%; }
+.confetti:nth-child(2) { left: 20%; }
+.confetti:nth-child(3) { left: 30%; }
+.confetti:nth-child(4) { left: 40%; }
+.confetti:nth-child(5) { left: 50%; }
+.confetti:nth-child(6) { left: 60%; }
+.confetti:nth-child(7) { left: 70%; }
+.confetti:nth-child(8) { left: 80%; }
+.confetti:nth-child(9) { left: 90%; }
+.confetti:nth-child(10) { left: 100%; }
+
